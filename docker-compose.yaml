@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  backend:
+    image: django/todo:v1
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  frontend:
+    image: todoist_react:v1
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+  db:
+    image: postgres:12
+    environment:
+      - POSTGRES_USER=myusername
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=docker_postgresdb
+    ports:
+      - "5432:5432"
