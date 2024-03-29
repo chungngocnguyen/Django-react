@@ -31,7 +31,7 @@ class TodoListPage extends Component {
     }
 
     axios
-      .get("http://127.0.0.1:8000/api/todos", {
+      .get("/api/todos", {
         headers: {
           Authorization: `Bearer ${access}`,
         },
@@ -58,7 +58,7 @@ class TodoListPage extends Component {
   
     if (item.id) {
       axios
-        .put(`http://127.0.0.1:8000/api/todos/${item.id}/`, item, {
+        .put(`/api/todos/${item.id}/`, item, {
           headers: {
             Authorization: `Bearer ${access_token}`,
           },
@@ -68,7 +68,7 @@ class TodoListPage extends Component {
     }
   
     axios
-      .post("http://127.0.0.1:8000/api/todos/", item, {
+      .post("/api/todos/", item, {
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
@@ -85,7 +85,7 @@ class TodoListPage extends Component {
     }
   
     axios
-      .delete(`http://127.0.0.1:8000/api/todos/${item.id}/`, {
+      .delete(`/api/todos/${item.id}/`, {
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
