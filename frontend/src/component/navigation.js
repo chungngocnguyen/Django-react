@@ -15,13 +15,13 @@ export function Navigation() {
     
     <div>
     <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="/">JWT Authentification</Navbar.Brand>
+          <Navbar.Brand href="/">Task Manager</Navbar.Brand>
           <Nav className="me-auto">
           {isAuth ?
             <Nav.Link href="/">Home</Nav.Link>
             : null}
           {isAuth ?
-            <Nav.Link href="/todo">todo</Nav.Link>
+            <Nav.Link href="/todo">Task Manager App</Nav.Link>
             : null}
           </Nav>
 

@@ -9,7 +9,7 @@ class HomeView(APIView):
     permission_classes = (IsAuthenticated, )
   
     def get(self, request):
-        content = {'message': 'Welcome to the JWT Authentification page using React Js and Django!'}
+        content = {'message': 'Welcome to the Task Manager App! This is server 1!'}
         return Response(content)
 
 
